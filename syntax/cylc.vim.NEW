@@ -1,0 +1,94 @@
+" Simple syntax highlighting for cylc suite definition files.
+" Author: Hilary Oliver, 2011
+"______________________________________________________________________
+" 1/ Put this file in $HOME/.vim/syntax/ directory.
+
+" 2/ Put the following in $HOME/.vimrc for file type recognition:
+
+"augroup filetype
+"  au! BufRead,BufnewFile *suite.rc   set filetype=cylc
+"augroup END
+
+" (the wildcard in '*suite.rc' handles temporary files generated
+"  by the 'cylc view' command, e.g. /tmp/foo.bar.QYrZ0q.suite.rc)
+
+" 3/ If you want to open files with syntax folds initially open, then
+"    also add the following line to your $HOME/.vimrc file:
+
+" set foldlevelstart=99
+"----------------------------------------------------------------------
+
+" syncing from start of file is best, but may be slow for large files:
+syn sync fromstart
+
+syn match lineCon "\\$" contained
+syn match badLineCon "\\ \+$"
+syn match trailingWS " \+$"
+
+syn match jinja2 '{%.\{-}%}'
+syn match jinja2variable '{{.\{-}}}'
+"syn match jinja2comment '{#.\{-}#}'
+syn region jinja2comment start='{#' end='#}'
+
+syn region cylcSectionA start='\[' end='\]' contains=trailingWS,lineCon,badLineCon,jinja2InString,jinja2commentInString,jinja2variableInString
+syn region cylcSectionB start='\[\[' end='\]\]' contains=trailingWS,lineCon,badLineCon,jinja2InString,jinja2commentInString,jinja2variableInString
+syn region cylcSectionC start='\[\[\[' end='\]\]\]' contains=trailingWS,lineCon,badLineCon,jinja2InString,jinja2commentInString,jinja2variableInString
+
+syn region myFold start='\_^ *\[\[\[\(\w\| \)' end='\ze\_^ *\[\{1,3}\(\w\| \)' transparent fold
+syn region myFold start='\_^ *\[\[\(\w\| \)' end='\ze\_^ *\[\{1,2}\(\w\| \)' transparent fold
+syn region myFold start='\_^ *\[\(\w\| \)' end='\_^ *\ze\[\(\w\| \)' transparent fold
+set foldmethod=syntax
+
+syn match cylcInlineMarker '\_^!\{1,}'
+syn match cylcItemKey ' *\zs\(\w\| \|\-\)*\>\ze *='
+
+syn match cylcInclude '%include *\(\w\|\-\|\/\|\.\)*'
+syn match cylcInline '.*\(START INLINED\|END INLINED\).*'
+
+syn match cylcToDo '[Tt][Oo][Dd][Oo].*$'
+syn region cylcComment start='#' end='$' contains=trailingWS,cylcToDo,lineCon,badLineCon,jinja2InString,jinja2commentInString,jinja2variableInString
+syn region cylcItemValue start='=\@<=' end='$' contains=trailingWS,cylcToDo,lineCon,badLineCon,jinja2InString,jinja2commentInString,jinja2variableInString,cylcComment
+syn match cylcCommentInString '#.*[^"']' contained contains=trailingWS,cylcToDo
+
+syn match jinja2InString '{%.\{-}[^"']%}' contained
+syn match jinja2variableInString '{{.\{-}[^"']}}' contained
+syn match jinja2commentInString '{#.\{-}[^"']#}' contained
+
+syn region cylcItemValue start=+=\@<= *"+ end=+"+ contains=trailingWS,lineCon,badLineCon,jinja2InString,jinja2commentInString,jinja2variableInString,cylcCommentInString oneline
+syn region cylcItemValue start=+=\@<= *'+ end=+'+ contains=trailingWS,lineCon,badLineCon,jinja2InString,jinja2commentInString,jinja2variableInString,cylcCommentInString oneline
+syn region cylcItemValue start=+=\@<= *"""+ end=+"""+ contains=trailingWS,lineCon,badLineCon,jinja2InString,jinja2commentInString,jinja2variableInString,cylcCommentInString
+syn region cylcItemValue start=+=\@<= *'''+ end=+'''+ contains=trailingWS,lineCon,badLineCon,jjinja2InString,jinja2commentInString,jinja2variableInString,cylcCommentInString
+
+" TODO: replace the following with cylc-specific groups as for cylcSectionA,B,C:
+hi def link cylcCommentInString Comment
+hi def link jinja2InString jinja2
+hi def link jinja2commentInString jinja2comment
+hi def link jinja2variableInString jinja2variable
+hi def link cylcComment Comment
+hi def link cylcInlineMarker Statement
+hi def link cylcItemValue String
+hi def link cylcItemKey Special
+hi def link cylcInline Statement
+hi def link cylcInclude Statement
+
+hi Normal ctermfg=DarkGrey guifg=#444444
+
+hi cylcSectionC ctermfg=DarkBlue guifg=chocolate1 term=bold cterm=bold gui=bold
+hi cylcSectionB ctermfg=DarkBlue guifg=chocolate3 term=bold cterm=bold gui=bold
+hi cylcSectionA ctermfg=DarkBlue guifg=chocolate4 term=bold cterm=bold gui=bold
+
+hi jinja2         ctermfg=DarkGrey ctermbg=lightgrey guifg=slategray guibg=#ffffef gui=None
+hi jinja2comment  ctermfg=DarkGrey ctermbg=lightgrey guifg=orange guibg=#ffefdf gui=None 
+hi jinja2variable ctermfg=DarkGrey ctermbg=lightgrey guifg=slategray guibg=#dfffff gui=None
+
+hi Comment ctermfg=red guifg=deeppink gui=italic
+hi cylcCommentInString ctermfg=red guifg=orange gui=italic
+hi String ctermfg=DarkBlue guifg=#00ca53 gui=None
+hi Special ctermfg=DarkGreen guifg=#00b2f3 gui=bold
+hi Statement ctermbg=LightGrey ctermfg=DarkBlue guibg=#aff guifg=#00a
+hi cylcToDo ctermbg=yellow guibg=yellow
+
+hi trailingWS ctermbg=Red guibg=DeepPink
+hi badLineCon ctermbg=Red guibg=#f00 guifg=#fff
+hi lineCon guifg=#0c0
+
