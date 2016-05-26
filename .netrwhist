@@ -1,8 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/gpfs_hpcf/filesets/hpcf/home/williamsjh/.vim'
-let g:netrw_dirhist_2='/gpfs_hpcf/filesets/hpcf/home/williamsjh/roses/u-ac103/app/fcm_make_um'
-let g:netrw_dirhist_3='/gpfs_hpcf/filesets/hpcf/home/williamsjh/roses/u-ac103/app'
-let g:netrw_dirhist_4='/gpfs_hpcf/filesets/hpcf/home/williamsjh/cylc-run/u-ac060-test-branch/work/19810902T0000Z/rose_ana_crun/cumf_out_hiep'
-let g:netrw_dirhist_5='/gpfs_hpcf/filesets/hpcf/home/williamsjh/roses/NIWA-GA7point0-v10point3-N96/app/install_ancil/opt/rose-app-niwa_fitzroy.conf'
-let g:netrw_dirhist_6='/gpfs_hpcf/filesets/hpcf/home/williamsjh/roses/NIWA-GA7point0-v10point3-N96/site'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/gpfs_hpcf/filesets/hpcf/home/williamsjh/roses/u-ab634/app/fcm_make_ocean/opt'
+let g:netrw_dirhist_2='/gpfs_hpcf/filesets/hpcf/home/williamsjh/nudging/Jonny/Input_files'
