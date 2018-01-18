@@ -117,3 +117,12 @@ nnoremap <CR> :noh<CR><CR>
 "This stops vim highlighting the last search from a previously opened file being highlighted at startup.
 :set viminfo^=h
 
+set nofoldenable    " disable folding
+
+" allow quit via single keypress (Q)
+map Q :qa<CR>
+
+
+set backspace=2 " make backspace work like most other programs
+
+
