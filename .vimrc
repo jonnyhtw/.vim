@@ -39,7 +39,7 @@ let fortran_fold_multilinecomments=1
 let fortran_do_enddo=1
 
 " to start with folds open:
-"set foldlevelstart=99
+set foldlevelstart=99
 
 augroup filetype
   au! BufRead,BufnewFile *.inc   set filetype=fortran
