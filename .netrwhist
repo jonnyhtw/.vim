@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/gpfs_hpcf/filesets/hpcf/home/williamsjh/roses/u-ab634/app/fcm_make_ocean/opt'
 let g:netrw_dirhist_2='/gpfs_hpcf/filesets/hpcf/home/williamsjh/nudging/Jonny/Input_files'
+let g:netrw_dirhist_3='/Users/Jonny/.dropbox'
