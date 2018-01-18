@@ -126,3 +126,6 @@ map Q :qa<CR>
 set backspace=2 " make backspace work like most other programs
 
 
+" alwasy show % through file
+set ruler
+map Q :qa<CR>
