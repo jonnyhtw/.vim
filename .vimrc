@@ -128,3 +128,14 @@ set backspace=2 " make backspace work like most other programs
 
 " alwasy show % through file
 set ruler
+
+
+" highlight all search results
+:set hlsearch
+
+" vimdiff navigation shortcut
+map ] ]c
+map [ [c
+
+
+
