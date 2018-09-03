@@ -57,8 +57,8 @@ autocmd FileType html,css,mhtml set noexpandtab tabstop=2
 set t_Co=256
 
 set textwidth=79
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%80v', 100)
+"highlight ColorColumn ctermbg=magenta
+"call matchadd('ColorColumn', '\%80v', 100)
 
 "hi Statement guifg=#22a8e3 gui=bold
 "hi Normal guifg=#404261
@@ -101,7 +101,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-colorscheme donbass
+colorscheme wombat256mod
 
 "python from powerline.vim import setup as powerline_setup
 "python powerline_setup()
