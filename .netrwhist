@@ -1,10 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/scale_akl_nobackup/filesets/nobackup/williamsjh/cylc-run/u-ar685/work/19780901T0000Z/coupled'
-let g:netrw_dirhist_2='/scale_akl_nobackup/filesets/nobackup/williamsjh/cylc-run/u-ar685/work/19780901T0000Z/coupled/pe_output'
-let g:netrw_dirhist_3='/scale_akl_persistent/filesets/home/williamsjh/roses/u-at053/app/fcm_make_um'
-let g:netrw_dirhist_4='/scale_akl_nobackup/filesets/nobackup/williamsjh/cylc-run/u-ar685/work/19780901T0000Z/coupled/pe_output'
-let g:netrw_dirhist_5='/scale_akl_persistent/filesets/home/williamsjh/roses/u-at053/app/fcm_make_um'
-let g:netrw_dirhist_6='/scale_akl_nobackup/filesets/nobackup/williamsjh/cylc-run/NIWA-cray-intel-N96ORCA1/work/19780901T0000Z/coupled/pe_output'
-let g:netrw_dirhist_7='/scale_akl_nobackup/filesets/nobackup/williamsjh/cylc-run/u-at053/share/data/History_Data/CICEhist/archive_ready_means'
-let g:netrw_dirhist_8='/scale_akl_persistent/filesets/home/williamsjh/roses/u-at053/app/postproc'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/scale_wlg_persistent/filesets/home/williamsjh/roses/u-bc331'
+let g:netrw_dirhist_2='/scale_wlg_persistent/filesets/home/williamsjh/roses/u-bf492/bin'

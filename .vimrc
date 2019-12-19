@@ -101,7 +101,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-colorscheme wombat256mod
+colorscheme donbass
 
 "python from powerline.vim import setup as powerline_setup
 "python powerline_setup()
