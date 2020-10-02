@@ -6,8 +6,7 @@ import re
 
 class Bibliography(dict):
     def __init__(self, txt, macros=None):
-        """
-        doc string
+        """doc string
 
         txt:
             a string which represents the entire bibtex entry. A typical
