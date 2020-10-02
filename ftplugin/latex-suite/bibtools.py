@@ -101,7 +101,7 @@ class Bibliography(dict):
             return dict.__getitem__(self, key)
         except KeyError:
             return ''
-        
+
     def __str__(self):
         if self['bibtype'].lower() == 'string':
             return 'String: %(macro)s' % self
