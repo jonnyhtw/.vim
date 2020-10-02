@@ -23,7 +23,6 @@ class Bibliography(dict):
                   timestamp = {2006.01.02},
                 }
         """
-
         if macros:
             for k, v in macros.iteritems():
                 txt = txt.replace(k, '{'+v+'}')
