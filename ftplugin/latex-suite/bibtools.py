@@ -6,25 +6,6 @@ import re
 
 class Bibliography(dict):
     def __init__(self, txt, macros=None):
-        """
-        doc string
-
-        txt:
-            a string which represents the entire bibtex entry. A typical
-            entry is of the form:
-                @ARTICLE{ellington:84:part3,
-                  author = {Ellington, C P},
-                  title = {The Aerodynamics of Hovering Insect Flight. III. Kinematics},
-                  journal = {Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences},
-                  year = {1984},
-                  volume = {305},
-                  pages = {41-78},
-                  number = {1122},
-                  owner = {Srinath},
-                  pdf = {C:\srinath\research\papers\Ellington-3-Kinematics.pdf},
-                  timestamp = {2006.01.02},
-                }
-        """
         if macros:
             for k, v in macros.iteritems():
                 txt = txt.replace(k, '{'+v+'}')
