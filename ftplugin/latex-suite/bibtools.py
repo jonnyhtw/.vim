@@ -6,6 +6,9 @@ import re
 
 class Bibliography(dict):
     def __init__(self, txt, macros=None):
+        """
+        doc string
+        """
         if macros:
             for k, v in macros.iteritems():
                 txt = txt.replace(k, '{'+v+'}')
