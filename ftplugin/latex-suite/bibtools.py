@@ -126,8 +126,8 @@ class Bibliography(dict):
 
         elif self['bibtype'].lower() == 'phdthesis':
             return ('PhD [%(key)s]\n' +
-                    'TI "%(title)s"\n' + 
-                    'AU %(author)s\n' + 
+                    'TI "%(title)s"\n' +
+                    'AU %(author)s\n' +
                     'IN In %(school)s, %(year)s') % self
 
         elif self['bibtype'].lower() == 'book':
