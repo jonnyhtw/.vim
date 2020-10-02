@@ -5,7 +5,7 @@
 import re
 
 class Bibliography(dict):
-    def __init__(self, txt, macros={}):
+    def __init__(self, txt, macros=None):
         """
         txt:
             a string which represents the entire bibtex entry. A typical
