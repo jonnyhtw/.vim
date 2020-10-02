@@ -136,6 +136,9 @@ class Bibliography(dict):
             return s.rstrip()
 
     def satisfies(self, filters):
+        """
+        doc string
+        """
         for field, regexp in filters:
             if not re.search(regexp, self[field], re.I):
                 return False
