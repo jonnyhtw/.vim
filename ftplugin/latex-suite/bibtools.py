@@ -218,4 +218,4 @@ if __name__ == "__main__":
     import sys
 
     bf = BibFile(sys.argv[1])
-    print bf
+    print(bf)
