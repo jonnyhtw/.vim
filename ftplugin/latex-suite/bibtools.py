@@ -94,7 +94,7 @@ class Bibliography(dict):
                 self['macro'] = {field: value}
 
         self['bodytext'] = self['bodytext'].rstrip()
-        
+
 
     def __getitem__(self, key):
         try:
