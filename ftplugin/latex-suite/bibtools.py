@@ -213,15 +213,6 @@ class BibFile:
     def rmsortfields(self):
         self.sortfields = []
 
-    def sort(self):
-        def cmpfun(b1, b2):
-            for f in self.sortfields:
-                c = cmp(b1[f], b2[f])
-                if c:
-                    return c
-            return 0
-        self.bibentries.sort(cmp=cmpfun)
-
 if __name__ == "__main__":
     import sys
 
