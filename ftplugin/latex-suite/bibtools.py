@@ -105,6 +105,9 @@ class Bibliography(dict):
             return ''
 
     def __str__(self):
+        """
+        doc string
+        """
         if self['bibtype'].lower() == 'string':
             return 'String: %(macro)s' % self
 
@@ -160,6 +163,9 @@ class Bibliography(dict):
 class BibFile:
 
     def __init__(self, filelist=''):
+        """
+        doc string
+        """
         self.bibentries = []
         self.filters = []
         self.macros = {}
