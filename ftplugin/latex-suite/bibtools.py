@@ -96,6 +96,9 @@ class Bibliography(dict):
 
 
     def __getitem__(self, key):
+        """
+        doc string
+        """
         try:
             return dict.__getitem__(self, key)
         except KeyError:
