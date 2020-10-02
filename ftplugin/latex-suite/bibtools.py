@@ -166,8 +166,8 @@ class BibFile:
             for f in filelist.splitlines():
                 self.addfile(f)
 
-    def addfile(self, file):
-        fields = open(file).read().split('@')
+    def addfile(self, myfile):
+        fields = open(myfile).read().split('@')
         for f in fields:
             if not (f and re.match('string', f, re.I)):
                 continue
@@ -181,7 +181,7 @@ class BibFile:
 
             b = Bibliography('@' + f, self.macros)
             if b:
-                b['file'] = file
+                b['myfile'] = myfile
                 b['id'] = len(self.bibentries)
                 self.bibentries += [b]
 
