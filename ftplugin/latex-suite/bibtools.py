@@ -201,6 +201,9 @@ class BibFile:
         self.filters = []
 
     def __str__(self):
+        """
+        doc string
+        """
         s = ''
         for b in self.bibentries:
             if b['key'] and b.satisfies(self.filters):
