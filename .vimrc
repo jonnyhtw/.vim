@@ -137,5 +137,8 @@ set ruler
 map ] ]c
 map [ [c
 
+if &diff
+        colorscheme donbass
+endif
 
 
