@@ -145,3 +145,6 @@ if !has('nvim')
     set ttymouse=xterm2
 endif
 
+" Enable highlighting of the current line
+set cursorline
+set cursorcolumn
