@@ -91,7 +91,6 @@ nmap <silent> <leader>dl :call DiffToggle(1)<cr>
 nmap <silent> <leader>dc :call DiffToggle(2)<cr>
 nmap <silent> <leader>dr :call DiffToggle(3)<cr>
 
-execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
