@@ -57,19 +57,9 @@ autocmd FileType html,css,mhtml set noexpandtab tabstop=2
 set t_Co=256
 
 set textwidth=79
-"highlight ColorColumn ctermbg=magenta
-"call matchadd('ColorColumn', '\%80v', 100)
-
-"hi Statement guifg=#22a8e3 gui=bold
-"hi Normal guifg=#404261
-"hi Comment guifg=#ff6900
-"hi Type guifg=#28d45b gui=bold"
-"hi String guifg=#aa00ff"
 
 set laststatus=2
 
-"set guifont=Source\ Code\ Pro\ for\ Powerline\ Regular\ 11
-"set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
 
 let mapleader=","
 
@@ -106,10 +96,6 @@ syntax on
 filetype plugin indent on
 
 colorscheme evening
-
-"python from powerline.vim import setup as powerline_setup
-"python powerline_setup()
-"python del powerline_setup
 
 augroup filetype
   au! BufRead,BufnewFile rose-*.conf,rose-*.info set filetype=rose-conf
@@ -157,53 +143,17 @@ set cursorcolumn
 
 
 call plug#begin()
-" The default plugin directory will be as follows:
-"   - Vim (Linux/macOS): '~/.vim/plugged'
-"   - Vim (Windows): '~/vimfiles/plugged'
-"   - Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
-" You can specify a custom plugin directory by passing it as the argument
-"   - e.g. `call plug#begin('~/.vim/plugged')`
-"   - Avoid using standard Vim directory names like 'plugin'
-
-" Make sure you use single quotes
-
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-Plug 'junegunn/vim-easy-align'
-
-" Any valid git URL is allowed
-Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-
-" Multiple Plug commands can be written in a single line using | separators
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-
-" Using a non-default branch
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-
-" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
-Plug 'fatih/vim-go', { 'tag': '*' }
-
-" Plugin options
-Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-
-" Plugin outside ~/.vim/plugged with post-update hook
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-" Unmanaged plugin (manually installed and updated)
-Plug '~/my-prototype-plugin'
-
 
 Plug 'soywod/himalaya', {'rtp': 'vim'}
+
+Plug 'preservim/nerdtree'
+
 
 " Initialize plugin system
 call plug#end()
 
 
 set hidden
-
 
 
 
