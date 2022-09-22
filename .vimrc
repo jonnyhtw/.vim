@@ -267,6 +267,8 @@ syntax on
 filetype plugin indent on
 
 colorscheme evening
+colorscheme donbass
+colorscheme gruvbox
 
 augroup filetype
   au! BufRead,BufnewFile rose-*.conf,rose-*.info set filetype=rose-conf
@@ -327,4 +329,4 @@ call plug#end()
 set hidden
 
 
-
+set bg=dark
