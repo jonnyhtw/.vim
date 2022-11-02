@@ -337,6 +337,3 @@ nmap <esc>OH 0
 nmap <esc>OF $
 imap <esc>OF <esc>$a
 cmap <esc>OF <end>
-packadd! dracula
-syntax enable
-colorscheme dracula
