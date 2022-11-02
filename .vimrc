@@ -326,4 +326,6 @@ call plug#end()
 
 set hidden
 
-
+packadd! dracula
+syntax enable
+colorscheme dracula
