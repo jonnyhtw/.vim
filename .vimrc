@@ -323,7 +323,3 @@ Plug 'preservim/nerdtree'
 " Initialize plugin system
 call plug#end()
 
-
-set hidden
-
-highlight Cursor guibg=#626262
