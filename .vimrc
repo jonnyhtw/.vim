@@ -2,6 +2,7 @@
 au VimENter * if &diff | execute 'windo set wrap' | endif
 
 set splitright
+set shortmess-=S
 set splitbelow
 set number
 set incsearch
@@ -299,7 +300,7 @@ map ] ]c
 map [ [c
 
 if &diff
-        colorscheme slate
+        colorscheme donbass
 endif
 
 " https://vi.stackexchange.com/a/25026
@@ -331,3 +332,11 @@ Plug 'preservim/nerdtree'
 " Initialize plugin system
 call plug#end()
 
+
+" from https://stackoverflow.com/a/774599/6288682
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+      au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+          \| exe "normal! g'\"" | endif
+endif
