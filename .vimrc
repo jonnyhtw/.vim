@@ -190,10 +190,9 @@ function! WatchForChanges(bufname, ...)
   elseif l:defined
     let msg = msg . 'Already watching ' . bufspec . ' for external updates'
   end
-  echo msg
+  "echo msg
   let @"=reg_saved
 endfunction
-
 
 let autoreadargs={'autoread':1} 
 execute WatchForChanges("*",autoreadargs) 
@@ -267,7 +266,8 @@ nmap <silent> <leader>dr :call DiffToggle(3)<cr>
 syntax on
 filetype plugin indent on
 
-colorscheme evening
+" colorscheme donbass
+
 
 augroup filetype
   au! BufRead,BufnewFile rose-*.conf,rose-*.info set filetype=rose-conf
@@ -299,9 +299,6 @@ set ruler
 map ] ]c
 map [ [c
 
-if &diff
-        colorscheme donbass
-endif
 
 " https://vi.stackexchange.com/a/25026
 
@@ -333,6 +330,15 @@ Plug 'preservim/nerdtree'
 call plug#end()
 
 
+Plug 'junegunn/seoul256.vim'
+" Unified color scheme (default: dark)
+colo seoul256
+" seoul256 (dark):
+"   Range:   233 (darkest) ~ 239 (lightest)
+"   Default: 237
+let g:seoul256_background = 239
+colo seoul256
+
 " from https://stackoverflow.com/a/774599/6288682
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
@@ -340,3 +346,16 @@ if has("autocmd")
       au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
           \| exe "normal! g'\"" | endif
 endif
+
+
+packadd! dracula
+syntax enable
+colorscheme dracula
+
+if &diff
+        colorscheme donbass
+endif
+
+" speeds up startup ---> https://stackoverflow.com/a/17719528/6288682
+set clipboard=exclude:.*
+
