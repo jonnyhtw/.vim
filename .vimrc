@@ -348,9 +348,6 @@ if has("autocmd")
 endif
 
 
-packadd! dracula
-syntax enable
-colorscheme dracula
 
 if &diff
         colorscheme donbass
@@ -359,3 +356,8 @@ endif
 " speeds up startup ---> https://stackoverflow.com/a/17719528/6288682
 set clipboard=exclude:.*
 
+Plug 'dracula/vim', { 'as': 'dracula' }
+call plug#end()
+"packadd! dracula
+syntax enable
+colorscheme dracula
