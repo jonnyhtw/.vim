@@ -266,7 +266,7 @@ nmap <silent> <leader>dr :call DiffToggle(3)<cr>
 syntax on
 filetype plugin indent on
 
-" colorscheme donbass
+colorscheme donbass
 
 
 augroup filetype
@@ -332,12 +332,12 @@ call plug#end()
 
 Plug 'junegunn/seoul256.vim'
 " Unified color scheme (default: dark)
-colo seoul256
+"colo seoul256
 " seoul256 (dark):
 "   Range:   233 (darkest) ~ 239 (lightest)
 "   Default: 237
 let g:seoul256_background = 239
-colo seoul256
+"colo seoul256
 
 " from https://stackoverflow.com/a/774599/6288682
 " Uncomment the following to have Vim jump to the last position when
@@ -349,9 +349,6 @@ endif
 
 
 
-if &diff
-        colorscheme donbass
-endif
 
 " speeds up startup ---> https://stackoverflow.com/a/17719528/6288682
 set clipboard=exclude:.*
@@ -361,3 +358,11 @@ call plug#end()
 "packadd! dracula
 syntax enable
 colorscheme dracula
+
+
+
+colo monokai
+
+if &diff
+        colorscheme donbass
+endif
