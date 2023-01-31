@@ -266,6 +266,9 @@ nmap <silent> <leader>dr :call DiffToggle(3)<cr>
 syntax on
 filetype plugin indent on
 
+
+
+
 colorscheme donbass
 
 
@@ -325,6 +328,10 @@ Plug 'soywod/himalaya', {'rtp': 'vim'}
 
 Plug 'preservim/nerdtree'
 
+Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
+
+
+
 
 " Initialize plugin system
 call plug#end()
@@ -362,6 +369,8 @@ colorscheme dracula
 
 
 colo monokai
+
+colo spaceduck
 
 if &diff
         colorscheme donbass
