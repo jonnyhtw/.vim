@@ -338,27 +338,12 @@ endif
 
 " speeds up startup ---> https://stackoverflow.com/a/17719528/6288682
 set clipboard=exclude:.*
+syntax enable
 
 call plug#begin()
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'soywod/himalaya', {'rtp': 'vim'}
-Plug 'endel/vim-github-colorscheme'
-Plug 'preservim/nerdtree'
 Plug 'sts10/vim-pink-moon'
-Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 call plug#end()
 
-
-
-
-
-syntax enable
-colorscheme dracula
-colo monokai
-
-colo spaceduck
-
-colo github
 colo pink-moon
 
 if &diff
