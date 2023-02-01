@@ -326,11 +326,14 @@ call plug#begin()
 
 Plug 'soywod/himalaya', {'rtp': 'vim'}
 
+Plug 'endel/vim-github-colorscheme'
+
 Plug 'preservim/nerdtree'
 
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 
 
+Plug 'sts10/vim-pink-moon'
 
 
 " Initialize plugin system
@@ -371,6 +374,9 @@ colorscheme dracula
 colo monokai
 
 colo spaceduck
+
+colo github
+colo pink-moon
 
 if &diff
         colorscheme donbass
