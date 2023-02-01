@@ -322,32 +322,8 @@ set cursorcolumn
 
 
 
-call plug#begin()
-
-Plug 'soywod/himalaya', {'rtp': 'vim'}
-
-Plug 'endel/vim-github-colorscheme'
-
-Plug 'preservim/nerdtree'
-
-Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 
 
-Plug 'sts10/vim-pink-moon'
-
-
-" Initialize plugin system
-call plug#end()
-
-
-Plug 'junegunn/seoul256.vim'
-" Unified color scheme (default: dark)
-"colo seoul256
-" seoul256 (dark):
-"   Range:   233 (darkest) ~ 239 (lightest)
-"   Default: 237
-let g:seoul256_background = 239
-"colo seoul256
 
 " from https://stackoverflow.com/a/774599/6288682
 " Uncomment the following to have Vim jump to the last position when
@@ -363,14 +339,21 @@ endif
 " speeds up startup ---> https://stackoverflow.com/a/17719528/6288682
 set clipboard=exclude:.*
 
+call plug#begin()
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'soywod/himalaya', {'rtp': 'vim'}
+Plug 'endel/vim-github-colorscheme'
+Plug 'preservim/nerdtree'
+Plug 'sts10/vim-pink-moon'
+Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 call plug#end()
-"packadd! dracula
+
+
+
+
+
 syntax enable
 colorscheme dracula
-
-
-
 colo monokai
 
 colo spaceduck
