@@ -269,7 +269,6 @@ filetype plugin indent on
 
 
 
-colorscheme donbass
 
 
 augroup filetype
