@@ -348,3 +348,5 @@ colo pink-moon
 if &diff
         colorscheme donbass
 endif
+
+:ca qq q!
