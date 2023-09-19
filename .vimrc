@@ -236,8 +236,6 @@ set laststatus=2
 let mapleader=","
 
 
-let g:himalaya_mailbox_picker = 'native'
-let g:himalaya_telescope_preview_enabled = 0
 
 " http://vim.wikia.com/wiki/A_better_Vimdiff_Git_mergetool
 " Disable one diff window during a three-way diff allowing you to cut out the
@@ -265,6 +263,7 @@ nmap <silent> <leader>dr :call DiffToggle(3)<cr>
 
 syntax on
 filetype plugin indent on
+
 
 
 
