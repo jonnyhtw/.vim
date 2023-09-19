@@ -11,12 +11,6 @@ set wrap
 set formatoptions-=t
 
 syntax enable
-if has('gui_running')
-    set background=light
-else
-    "set background=dark
-    set background=light
-endif
 
 
 let g:sh_fold_enabled=1
@@ -339,13 +333,14 @@ set clipboard=exclude:.*
 syntax enable
 
 call plug#begin()
-Plug 'sts10/vim-pink-moon'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
-colo pink-moon
 
 if &diff
         colorscheme donbass
 endif
 
 :ca qq q!
+
+autocmd vimenter * ++nested colorscheme gruvbox
