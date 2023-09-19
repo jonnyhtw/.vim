@@ -337,10 +337,11 @@ Plug 'morhetz/gruvbox'
 call plug#end()
 
 
-if &diff
-        colorscheme donbass
-endif
 
 :ca qq q!
 
-autocmd vimenter * ++nested colorscheme gruvbox
+colorscheme gruvbox
+
+if &diff
+        colorscheme donbass
+endif
