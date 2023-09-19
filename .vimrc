@@ -11,7 +11,7 @@ set wrap
 set formatoptions-=t
 
 syntax enable
-
+set background=dark
 
 let g:sh_fold_enabled=1
 
