@@ -307,6 +307,10 @@ if !has('nvim')
     set ttymouse=xterm2
 endif
 
+set mouse=a
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+
 " Enable highlighting of the current line
 set cursorline
 set cursorcolumn
@@ -345,3 +349,5 @@ colorscheme gruvbox
 if &diff
         colorscheme donbass
 endif
+
+set wildmode=longest:full,full
