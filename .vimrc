@@ -338,16 +338,17 @@ syntax enable
 
 call plug#begin()
 Plug 'morhetz/gruvbox'
+Plug 'kshenoy/vim-sol'
 call plug#end()
 
 
 
 :ca qq q!
 
-colorscheme gruvbox
+colorscheme donbass
 
 if &diff
-        colorscheme donbass
+        colorscheme sol-term
 endif
 
 set wildmode=longest:full,full
