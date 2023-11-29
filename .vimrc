@@ -338,6 +338,7 @@ syntax enable
 
 call plug#begin()
 Plug 'morhetz/gruvbox'
+Plug 'romainl/Apprentice'
 Plug 'kshenoy/vim-sol'
 Plug 'vim-scripts/greenvision'
 call plug#end()
@@ -345,8 +346,11 @@ call plug#end()
 colorscheme greenvision
 
 if &diff
-        colorscheme sol-term
+        colorscheme solarized
 endif
+
+" Set high visibility for diff mode
+let g:solarized_diffmode="high"
 
 set wildmode=longest:full,full
 
