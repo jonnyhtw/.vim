@@ -307,9 +307,7 @@ if !has('nvim')
     set ttymouse=xterm2
 endif
 
-set mouse=a
-map <ScrollWheelUp> <C-Y>
-map <ScrollWheelDown> <C-E>
+set mouse=v
 
 " Enable highlighting of the current line
 set cursorline
