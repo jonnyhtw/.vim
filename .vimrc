@@ -344,7 +344,6 @@ Plug 'dracula/vim', {'as':'dracula'}
 Plug 'chriskempson/base16-vim'
 call plug#end()
 
-execute 'colorscheme' $randomvimcolorscheme
 
 
 "if &diff
