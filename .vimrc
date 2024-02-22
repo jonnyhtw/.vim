@@ -364,3 +364,4 @@ set cursorline
 set cursorcolumn
 hi CursorColumn ctermbg=8
 
+autocmd BufEnter * :colo
