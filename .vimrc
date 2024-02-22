@@ -341,6 +341,8 @@ Plug 'flazz/vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'xolox/vim-misc'
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'dracula/vim', {'as':'dracula'}
+Plug 'chriskempson/base16-vim'
 call plug#end()
 
 execute 'colorscheme' $randomvimcolorscheme
