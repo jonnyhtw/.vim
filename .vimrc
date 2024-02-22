@@ -309,9 +309,6 @@ endif
 
 set mouse=v
 
-" Enable highlighting of the current line
-set cursorline
-set cursorcolumn
 
 
 
@@ -339,12 +336,18 @@ Plug 'morhetz/gruvbox'
 Plug 'romainl/Apprentice'
 Plug 'kshenoy/vim-sol'
 Plug 'vim-scripts/greenvision'
+Plug 'nordtheme/vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'xolox/vim-colorscheme-switcher'
+Plug 'xolox/vim-misc'
+Plug 'rafi/awesome-vim-colorschemes'
 call plug#end()
 
-colorscheme greenvision
+execute 'colorscheme' $randomvimcolorscheme
+
 
 if &diff
-        colorscheme solarized
+        colorscheme twilight
 endif
 
 " Set high visibility for diff mode
@@ -353,3 +356,9 @@ let g:solarized_diffmode="high"
 set wildmode=longest:full,full
 
 :ca qq q!
+
+" Enable highlighting of the current line
+set cursorline
+set cursorcolumn
+hi CursorColumn ctermbg=8
+
