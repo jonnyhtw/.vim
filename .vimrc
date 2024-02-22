@@ -344,7 +344,7 @@ Plug 'dracula/vim', {'as':'dracula'}
 Plug 'chriskempson/base16-vim'
 call plug#end()
 
-
+colo $randomvimcolorscheme
 
 "if &diff
  "       colorscheme twilight
@@ -362,5 +362,4 @@ set cursorline
 set cursorcolumn
 hi CursorColumn ctermbg=8
 
-"autocmd BufEnter * :colo
 
