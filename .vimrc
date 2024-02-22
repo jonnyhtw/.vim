@@ -348,9 +348,9 @@ call plug#end()
 execute 'colorscheme' $randomvimcolorscheme
 
 
-if &diff
-        colorscheme twilight
-endif
+"if &diff
+ "       colorscheme twilight
+"endif
 
 " Set high visibility for diff mode
 let g:solarized_diffmode="high"
