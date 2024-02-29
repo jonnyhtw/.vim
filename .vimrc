@@ -349,6 +349,7 @@ colo $randomvimcolorscheme
 if &diff
        colorscheme twilight
        colorscheme twitchy
+       colorscheme donbass
 endif
 
 " Set high visibility for diff mode
