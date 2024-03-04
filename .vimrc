@@ -350,6 +350,7 @@ if &diff
        colorscheme twilight
        colorscheme twitchy
        colorscheme donbass
+       colorscheme nord
 endif
 
 " Set high visibility for diff mode
