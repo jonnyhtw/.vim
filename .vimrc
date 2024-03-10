@@ -332,16 +332,7 @@ set clipboard=exclude:.*
 syntax enable
 
 call plug#begin()
-Plug 'morhetz/gruvbox'
-Plug 'romainl/Apprentice'
-Plug 'kshenoy/vim-sol'
-Plug 'vim-scripts/greenvision'
 Plug 'nordtheme/vim'
-Plug 'xolox/vim-colorscheme-switcher'
-Plug 'xolox/vim-misc'
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'dracula/vim', {'as':'dracula'}
-Plug 'chriskempson/base16-vim'
 call plug#end()
 
 colo $randomvimcolorscheme
