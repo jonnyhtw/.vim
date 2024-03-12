@@ -332,7 +332,6 @@ set clipboard=exclude:.*
 syntax enable
 
 call plug#begin()
-Plug 'nordtheme/vim'
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'xolox/vim-misc'
 call plug#end()
