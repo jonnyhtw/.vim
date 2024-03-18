@@ -339,10 +339,8 @@ call plug#end()
 colo blue
 
 if &diff
-       colorscheme twilight
-       colorscheme twitchy
        colorscheme donbass
-       colorscheme nord
+       colorscheme twilight
 endif
 
 " Set high visibility for diff mode
