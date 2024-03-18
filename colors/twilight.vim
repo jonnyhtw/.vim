@@ -1,114 +1,149 @@
+" Vim color scheme
+"
+" Name:        twilight.vim
+" Maintainer:  Jonathan Rudenberg <jonathan@titanous.com> 
+" License:     MIT
+"
+" A GUI only vim theme based on the Twilight TextMate theme.
+" Original structure taken from railscasts.vim [1].
+" Some parts of this theme were borrowed from the well-documented Lucius theme [2].
+"
+" [1] http://github.com/jpo/vim-railscasts-theme
+" [2] http://www.vim.org/scripts/script.php?script_id=2536
 
 set background=dark
-
 hi clear
-
 if exists("syntax_on")
   syntax reset
 endif
+let g:colors_name = "twilight"
 
-let colors_name = "twilight"
+hi Normal                    guifg=#F8F8F8 guibg=#141414
+hi Cursor                    guibg=#FFFFFF
+hi CursorLine                guibg=#4C4C4C
+hi LineNr                    guifg=#888888 guibg=#DEDEDE
+hi Search                    guibg=#5A647E
+hi Visual                    guibg=#5A647E
+hi Directory                 guifg=#7587A6 gui=NONE
+hi SpecialKey                guifg=#4C4C4C
+hi NonText                   guifg=#4C4C4C gui=NONE
+hi MatchParen                guibg=#7587A6
+hi ErrorMsg                  guifg=#F8F8F8 guibg=#B22518
+hi WarningMsg                guifg=#B22518
+hi Search                    guifg=#FFFFFF guibg=#075D7F
+hi MoreMsg                   guifg=#619518
+hi Question                  guifg=#359926
+hi WildMenu                  guibg=#E9C062
+hi Title                     guifg=#FFFFFF
 
-let s:grey_blue = '#8a9597'
-let s:light_grey_blue = '#a0a8b0'
-let s:dark_grey_blue = '#34383c'
-let s:mid_grey_blue = '#64686c'
-let s:beige = '#ceb67f'
-let s:light_orange = '#ebc471'
-let s:yellow = '#e3d796'
-let s:violet = '#a999ac'
-let s:green = '#a2a96f'
-let s:lightgreen = '#c2c98f'
-let s:red = '#d08356'
-let s:cyan = '#74dad9'
-let s:darkgrey = '#1a1a1a'
-let s:grey = '#303030'
-let s:lightgrey = '#605958'
-let s:white = '#fffedc'
+" Popup Menu
+hi Pmenu                     guifg=#FFFFFF guibg=#4C4C4C gui=NONE
+hi PmenuSel                  guifg=#000000 guibg=#075D7F gui=NONE
+hi PMenuSbar                 guibg=#7587A6 gui=NONE
+hi PMenuThumb                guibg=#AAAAAA gui=NONE
 
-if version >= 700
-  hi CursorLine guibg=#262626
-  hi CursorColumn guibg=#262626
-  hi MatchParen guifg=white guibg=#80a090 gui=bold
+" Folding
+hi Folded                    guifg=#99B1D8 guibg=#4C4C4C
+hi FoldColumn                guifg=#99B1D8 guibg=Grey40
 
-  "Tabpages
-  hi TabLine guifg=#a09998 guibg=#202020 gui=underline
-  hi TabLineFill guifg=#a09998 guibg=#202020 gui=underline
-  hi TabLineSel guifg=#a09998 guibg=#404850 gui=underline
+" rubyRegexp*
+hi link rubyRegexp           Special
+hi link rubyRegexpSpecial    rubyRegexpEscape
+hi link rubyRegexpDelimiter  Special
+hi Special                   guifg=#E9C062
+hi rubyRegexpEscape          guifg=#CF7D34
 
-  "P-Menu (auto-completion)
-  hi Pmenu guifg=#605958 guibg=#303030 gui=underline
-  hi PmenuSel guifg=#a09998 guibg=#404040 gui=underline
-  "PmenuSbar
-  "PmenuThumb
-endif
+"rubyComment
+hi Comment                   guifg=#5F5A60 gui=italic
+hi Todo                      guifg=#5F5A60 guibg=NONE gui=italic
 
-hi Visual guibg=#404040
+"rubyPseudoVariable
+"nil, self, symbols, etc
+hi Constant                  guifg=#CF6A4C
+hi rubyConstant              guifg=#9B859D
 
-"hi Cursor guifg=NONE guibg=#586068
-hi Cursor guibg=#b0d0f0
+"rubyClass, rubyModule, rubyDefine
+"def, end, include, etc
+hi Define                    guifg=#CDA869
 
+"rubyInterpolation
+hi link rubyInterpolationDelimiter rubyInterpolation
+hi Delimiter                 guifg=#F9EE98
+hi rubyInterpolation         guifg=#DAEFA3
 
-exe 'hi Normal         guifg='.s:white             .' guibg='.s:darkgrey
-exe 'hi Underlined     guifg='.s:white             .' guibg='.s:darkgrey        .' gui=underline'
-exe 'hi NonText        guifg='.s:lightgrey         .' guibg='.s:grey
-exe 'hi SpecialKey     guifg='.s:grey              .' guibg='.s:darkgrey
+"rubyError, rubyInvalidVariable
+hi Error                     guifg=#F8F8F8 guibg=#562D56
 
-exe 'hi LineNr         guifg='.s:mid_grey_blue     .' guibg='.s:dark_grey_blue  .' gui=none'
-exe 'hi StatusLine     guifg='.s:white             .' guibg='.s:grey            .' gui=italic,underline'
-exe 'hi StatusLineNC   guifg='.s:lightgrey         .' guibg='.s:grey            .' gui=italic,underline'
-exe 'hi VertSplit      guifg='.s:grey              .' guibg='.s:grey            .' gui=none'
+"rubyFunction
+hi link rubyModuleDeclaration Function
+hi link rubyClassDeclaration Function
+hi Function                  guifg=#9B703F gui=NONE
 
-exe 'hi Folded         guifg='.s:grey_blue         .' guibg='.s:dark_grey_blue  .' gui=none'
-exe 'hi FoldColumn     guifg='.s:grey_blue         .' guibg='.s:dark_grey_blue  .' gui=none'
-exe 'hi SignColumn     guifg='.s:grey_blue         .' guibg='.s:dark_grey_blue  .' gui=none'
+"rubyIdentifier
+"@var, @@var, $var, etc
+hi Identifier                guifg=#7587A6 gui=NONE
 
-exe 'hi Comment        guifg='.s:mid_grey_blue     .' guibg='.s:darkgrey        .' gui=italic'
-exe 'hi TODO           guifg='.s:grey_blue         .' guibg='.s:darkgrey        .' gui=italic,bold'
+"rubyInclude
+"include, autoload, extend, load, require
+hi Include                   guifg=#CDA869 gui=NONE
 
-exe 'hi Title          guifg='.s:red               .' guibg='.s:darkgrey        .' gui=underline'
+"rubyKeyword, rubyKeywordAsMethod
+"alias, undef, super, yield, callcc, caller, lambda, proc
+hi Keyword                   guifg=#CDA869
 
-exe 'hi Constant       guifg='.s:red               .' guibg='.s:darkgrey        .' gui=none'
-exe 'hi String         guifg='.s:green             .' guibg='.s:darkgrey        .' gui=none'
-exe 'hi Special        guifg='.s:lightgreen        .' guibg='.s:darkgrey        .' gui=none'
+" same as define
+hi Macro                     guifg=#CDA869 gui=NONE
 
-exe 'hi Identifier     guifg='.s:grey_blue         .' guibg='.s:darkgrey        .' gui=none'
-exe 'hi Statement      guifg='.s:beige             .' guibg='.s:darkgrey        .' gui=none'
-exe 'hi Conditional    guifg='.s:beige             .' guibg='.s:darkgrey        .' gui=none'
-exe 'hi Repeat         guifg='.s:beige             .' guibg='.s:darkgrey        .' gui=none'
-exe 'hi Structure      guifg='.s:beige             .' guibg='.s:darkgrey        .' gui=none'
-exe 'hi Function       guifg='.s:violet            .' guibg='.s:darkgrey        .' gui=none'
+"rubyInteger
+hi Number                    guifg=#CF6A4C
 
-exe 'hi PreProc        guifg='.s:grey_blue         .' guibg='.s:darkgrey        .' gui=none'
-exe 'hi Operator       guifg='.s:light_orange      .' guibg='.s:darkgrey        .' gui=none'
-exe 'hi Type           guifg='.s:yellow            .' guibg='.s:darkgrey        .' gui=italic'
+" #if, #else, #endif
+hi PreCondit                 guifg=#CDA869 gui=NONE
 
-"hi Identifier guifg=#7587a6
-" Type d: 'class'
-"hi Structure guifg=#9B859D gui=underline
-"hi Function guifg=#dad085
-" dylan: method, library, ... d: if, return, ...
-"hi Statement guifg=#7187a1 gui=NONE
-" Keywords  d: import, module...
-"hi PreProc guifg=#8fbfdc
-"gui=underline
-"hi Operator guifg=#a07020
-"hi Repeat guifg=#906040 gui=underline
-"hi Type guifg=#708090
+" generic preprocessor
+hi PreProc                   guifg=#8996A8 gui=NONE
 
-"hi Type guifg=#f9ee98 gui=NONE
+"rubyControl, rubyAccess, rubyEval
+"case, begin, do, for, if unless, while, until else, etc.
+hi Statement                 guifg=#CDA869 gui=NONE
 
-"hi NonText guifg=#808080 guibg=#303030
+"rubyString
+hi link rubyStringDelimiter  String
+hi link rubyStringEscape     Delimiter
+hi String                    guifg=#8F9D6A
 
-"hi Macro guifg=#a0b0c0 gui=underline
+hi Type                      guifg=#7587A6 gui=NONE
 
-"Tabs, trailing spaces, etc (lcs)
-"hi SpecialKey guifg=#808080 guibg=#343434
+" Diffs
+hi DiffText                  guifg=#F8F8F8 guibg=#0E2231 gui=italic
+hi DiffAdd                   guifg=#F8F8F8 guibg=#253B22
+hi DiffDelete                guifg=#F8F8F8 guibg=#420E09 gui=NONE
+hi DiffChange                guifg=#F8F8F8 guibg=#4A410D
 
-"hi TooLong guibg=#ff0000 guifg=#f8f8f8
+" HTML
+hi link xmlTag               HtmlTag
+hi link xmlTagName           HtmlTagName
+hi link xmlEndTag            HtmlEndTag
+hi link HtmlTagName          HtmlTag
+hi link HtmlEndTag           HtmlTag
+hi link HtmlSpecialChar      Constant
+hi HtmlTag                   guifg=#CDA869
+hi HtmlArg                   guifg=#F9EE98
 
-hi Search guifg=#606000 guibg=#c0c000 gui=bold
+" HAML
+hi link hamlId               hamlClass
+hi link hamlClass            hamlTag
+hi link hamlAttributesHash   Operator
+hi hamlTag                   guifg=#F9EE98
 
-hi Directory guifg=#dad085 gui=NONE
-hi Error guibg=#602020
+" Javascript
+hi link javaScript           Normal
+hi link javascriptType       Keyword
+hi jQuery                    guifg=#9B859D
 
+" SASS
+hi link sassId               sassClass
+hi link cssFunctionName      Type
+hi StorageClass              guifg=#F8F8F8
+hi sassMixing                guifg=#9B5C2E
+hi sassClass                 guifg=#F9EE98

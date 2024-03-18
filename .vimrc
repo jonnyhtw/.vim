@@ -336,13 +336,11 @@ Plug 'xolox/vim-colorscheme-switcher'
 Plug 'xolox/vim-misc'
 call plug#end()
 
-colo $randomvimcolorscheme
+colo blue
 
 if &diff
-       colorscheme twilight
-       colorscheme twitchy
        colorscheme donbass
-       colorscheme nord
+       colorscheme twilight
 endif
 
 " Set high visibility for diff mode
