@@ -335,9 +335,11 @@ call plug#begin()
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'xolox/vim-misc'
 Plug 'lmintmate/blue-mood-vim'
+Plug 'vim-scripts/greenvision'
 call plug#end()
 
 colo blue-mood
+colo greenvision
 
 if &diff
        colorscheme donbass
