@@ -336,7 +336,7 @@ Plug 'xolox/vim-colorscheme-switcher'
 Plug 'xolox/vim-misc'
 call plug#end()
 
-colo $randomvimcolorscheme
+colo blue
 
 if &diff
        colorscheme twilight
