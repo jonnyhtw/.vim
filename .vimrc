@@ -336,14 +336,16 @@ Plug 'xolox/vim-colorscheme-switcher'
 Plug 'xolox/vim-misc'
 Plug 'lmintmate/blue-mood-vim'
 Plug 'vim-scripts/greenvision'
+Plug 'rafi/awesome-vim-colorschemes'
 call plug#end()
 
 colo blue-mood
-colo greenvision
+"colo greenvision
+colo space-vim-dark
 
 if &diff
-       colorscheme donbass
        colorscheme twilight
+       colorscheme donbass
 endif
 
 " Set high visibility for diff mode
