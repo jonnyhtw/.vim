@@ -333,6 +333,7 @@ syntax enable
 
 call plug#begin()
 Plug 'xolox/vim-colorscheme-switcher'
+Plug 'romainl/vim-dichromatic'
 Plug 'xolox/vim-misc'
 Plug 'lmintmate/blue-mood-vim'
 Plug 'vim-scripts/greenvision'
@@ -340,8 +341,9 @@ Plug 'rafi/awesome-vim-colorschemes'
 call plug#end()
 
 colo blue-mood
-"colo greenvision
+colo greenvision
 colo space-vim-dark
+colo dichromatic
 
 if &diff
        colorscheme twilight
