@@ -362,6 +362,5 @@ set cursorline
 set cursorcolumn
 hi CursorColumn ctermbg=8
 
-
 set textwidth=0
 set formatoptions-=t
