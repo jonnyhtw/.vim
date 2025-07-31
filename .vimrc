@@ -348,6 +348,7 @@ colo greenvision
 colo gruvbox
 colo donbass
 colo carbonized-light
+colo donbass
 
 if &diff
        colorscheme twilight
