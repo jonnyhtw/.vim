@@ -367,10 +367,10 @@ colo donbass
 colo donbass
 colorscheme shades_of_purple
 
-"if &diff
-"       colorscheme twilight
-"       colorscheme donbass
-"endif
+if &diff
+       colorscheme twilight
+       colorscheme donbass
+endif
 
 " Set high visibility for diff mode
 let g:solarized_diffmode="high"
@@ -386,3 +386,11 @@ hi CursorColumn ctermbg=8
 
 set textwidth=0
 set formatoptions-=t
+
+
+
+
+if &term =~ "xterm"
+  let &t_SI = "\e[4 q"   " Insert mode: underline cursor
+  let &t_EI = "\e[2 q"   " Normal mode: block cursor
+endif
