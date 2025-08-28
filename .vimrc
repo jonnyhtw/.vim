@@ -335,6 +335,23 @@ call plug#begin()
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'romainl/vim-dichromatic'
 Plug 'xolox/vim-misc'
+"""" install
+" install with vim-plug
+Plug 'Rigellute/shades-of-purple.vim'
+
+" or with NeoBundle
+" NeoBundle 'Rigellute/shades-of-purple.vim'
+" or with Vundle
+" Plugin 'Rigellute/shades-of-purple.vim'
+
+"""" enable 24bit true color
+" If you have vim >=8.0 or Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+"""" enable the theme
+syntax enable
 Plug 'lmintmate/blue-mood-vim'
 Plug 'vim-scripts/greenvision'
 Plug 'rafi/awesome-vim-colorschemes'
@@ -348,11 +365,12 @@ colo greenvision
 colo gruvbox
 colo donbass
 colo donbass
+colorscheme shades_of_purple
 
-if &diff
-       colorscheme twilight
-       colorscheme donbass
-endif
+"if &diff
+"       colorscheme twilight
+"       colorscheme donbass
+"endif
 
 " Set high visibility for diff mode
 let g:solarized_diffmode="high"
