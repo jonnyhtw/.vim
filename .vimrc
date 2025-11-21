@@ -8,6 +8,7 @@ set number
 set incsearch
 set ignorecase smartcase
 set wrap
+set linebreak
 set formatoptions-=t
 
 syntax enable
@@ -338,16 +339,22 @@ Plug 'xolox/vim-misc'
 Plug 'lmintmate/blue-mood-vim'
 Plug 'vim-scripts/greenvision'
 Plug 'rafi/awesome-vim-colorschemes'
+"Plug 'lervag/vimtex' 
+Plug 'lervag/vimtex', { 'tag': 'v2.15' }
 call plug#end()
 
+
+let g:vimtex_syntax_enabled = 1
+let g:vimtex_syntax_conceal_disable = 1
+
 colo blue-mood
-colo greenvision
-colo space-vim-dark
-colo dichromatic
-colo greenvision
-colo gruvbox
-colo donbass
-colo donbass
+"colo greenvision
+"colo space-vim-dark
+"colo dichromatic
+"colo greenvision
+"colo gruvbox
+"colo donbass
+"colo elflord
 
 if &diff
        colorscheme twilight
@@ -364,7 +371,7 @@ set wildmode=longest:full,full
 " Enable highlighting of the current line
 set cursorline
 set cursorcolumn
-hi CursorColumn ctermbg=8
+"hi CursorColumn ctermbg=8
 
 set textwidth=0
 set formatoptions-=t
@@ -376,3 +383,22 @@ if &term =~ "xterm"
   let &t_SI = "\e[4 q"   " Insert mode: underline cursor
   let &t_EI = "\e[2 q"   " Normal mode: block cursor
 endif
+
+" Enable true colors if supported
+if has('termguicolors')
+  set termguicolors
+endif
+
+" Dynamic ColorColumn highlight
+augroup ColorColumnFix
+  autocmd!
+  autocmd VimEnter,ColorScheme * call SetColorColumn()
+augroup END
+
+function! SetColorColumn()
+  if &background ==# 'dark'
+    highlight ColorColumn guibg=#3e4451 ctermbg=236
+  else
+    highlight ColorColumn guibg=#d0d0d0 ctermbg=252
+  endif
+endfunction
