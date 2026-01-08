@@ -335,6 +335,7 @@ syntax enable
 call plug#begin()
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'romainl/vim-dichromatic'
+Plug 'tpope/vim-commentary'
 Plug 'xolox/vim-misc'
 Plug 'lmintmate/blue-mood-vim'
 Plug 'vim-scripts/greenvision'
@@ -402,3 +403,7 @@ function! SetColorColumn()
     highlight ColorColumn guibg=#d0d0d0 ctermbg=252
   endif
 endfunction
+
+" Force all buffers to use # for comments
+set commentstring=#\ %s
+
