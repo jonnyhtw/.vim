@@ -407,3 +407,4 @@ endfunction
 " Force all buffers to use # for comments
 set commentstring=#\ %s
 
+set t_ut=
