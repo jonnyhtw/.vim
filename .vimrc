@@ -408,3 +408,6 @@ endfunction
 set commentstring=#\ %s
 
 set t_ut=
+
+" Trigger the plugin's command on startup
+autocmd VimEnter * RandomColorScheme
