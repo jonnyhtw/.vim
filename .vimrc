@@ -356,6 +356,7 @@ colo blue-mood
 "colo gruvbox
 "colo donbass
 "colo elflord
+colo carbonized-light
 
 if &diff
        colorscheme twilight
@@ -410,4 +411,4 @@ set commentstring=#\ %s
 set t_ut=
 
 " Trigger the plugin's command on startup
-autocmd VimEnter * RandomColorScheme
+" autocmd VimEnter * RandomColorScheme
