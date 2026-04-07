@@ -2,6 +2,7 @@
 au VimENter * if &diff | execute 'windo set wrap' | endif
 
 set splitright
+set splitright
 set shortmess-=S
 set splitbelow
 set number
