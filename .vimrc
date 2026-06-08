@@ -329,8 +329,8 @@ endif
 
 
 
-" speeds up startup ---> https://stackoverflow.com/a/17719528/6288682
-set clipboard=exclude:.*
+
+
 syntax enable
 
 call plug#begin()
