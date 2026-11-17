@@ -341,7 +341,7 @@ Plug 'xolox/vim-misc'
 Plug 'lmintmate/blue-mood-vim'
 Plug 'vim-scripts/greenvision'
 Plug 'rafi/awesome-vim-colorschemes'
-"Plug 'lervag/vimtex' 
+Plug 'vsherratt/cylc.vim'
 Plug 'lervag/vimtex', { 'tag': 'v2.15' }
 call plug#end()
 
